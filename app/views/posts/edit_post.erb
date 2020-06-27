@@ -1,0 +1,13 @@
+<h2> Edit Adventure </h2>
+
+<form method="post" action="/posts/<%=@post.id%>">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <li>
+    <p>Name: <input type="text" name="name" value="<%= @post.name %>"></p>
+    <p>Location: <input type="text" name="address" value="<%= @post.address %>"></p>
+    <p>Trail Length: <input type="text" name="length" value="<%=@post.length%>"></p>
+    <p>Best season to visit: <input type="text" name="season" value="<%=@post.season%>"></p>
+    <p>Description: <input type="text" name="description" value="<%=@post.description%>"></p>
+  </li>
+  <input type="submit" value="submit">
+</form>

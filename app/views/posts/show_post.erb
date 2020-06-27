@@ -1,0 +1,14 @@
+
+<h2><%= @post.name %></h2>
+<h4>Location: </h4><%=@post.address%></br>
+<h4>Trail Length: </h4><%=@post.length%></br>
+<h4>Best Season to visit: </h4><%=@post.season%></br>
+<h4>Description: </h4><%=@post.description%></br>
+</br>
+
+<form method="post" action="/posts/<%=@post.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Post">
+</form></br>
+
+<a href="/posts/<%=@post.id%>/edit">Edit post </a> or <a href="/posts">Take me home</a>

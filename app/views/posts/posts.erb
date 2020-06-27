@@ -1,0 +1,17 @@
+<p> Hey, <%= current_user.username%>! Thanks for being active in our community! </p>
+<h2> Here are the more recent adventures posted </h2>
+
+<% @posts.each do |post| %>
+  <div>
+    <h3> <a href="/posts/<%=post.id%>"><%= post.name %></a></h3>
+    <h4>Location: </h4><%= post.address %></br>
+    <h4>Trail length: </h4><%= post.length %></br>
+    <h4>Best season to visit: </h4><%= post.season %></br>
+    <h4>Description: </h4><%= post.description %></br>
+    -----------------------------------------------------------------------------------
+  </div>
+<% end %></br>
+</br>
+
+
+<a href="/posts/new"> Create an adventure </a> or <a href="logout">logout</a>
